@@ -1,5 +1,5 @@
 
-work_home=/home/program
+program_home=/home/program
 
 name=nexus
 app_home=/opt/sonatype
@@ -8,11 +8,11 @@ docker stop $name
 
 docker rm $name
 
-data_dir=$work_home/$name/nexus-data
+data_dir=$program_home/$name/nexus-data
 mkdir $data_dir
 chmod 777 $data_dir
 
-work_dir=$work_home/$name/sonatype-work
+work_dir=$program_home/$name/sonatype-work
 mkdir $work_dir
 chmod 777 $work_dir
 
