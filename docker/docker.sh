@@ -1,5 +1,5 @@
 
-work_home=/home/root/program
+work_home=/home/program
 
 name=nexus
 app_home=/opt/sonatype
