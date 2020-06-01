@@ -1,11 +1,15 @@
 
+image=sonatype/nexus3
+tag=latest
+
+docker pull $image:$tag
+
 program_home=/home/program
 
 name=nexus
 app_home=/opt/sonatype
 
 docker stop $name
-
 docker rm $name
 
 data_dir=$program_home/$name/nexus-data
@@ -23,6 +27,6 @@ docker run -d --restart unless-stopped \
   -v /etc/localtime:/etc/localtime \
   -v $data_dir:/nexus-data \
   -v $work_dir:$app_home/sonatype-work \
-  sonatype/nexus3
+  $image:$tag
 
 docker logs $name
