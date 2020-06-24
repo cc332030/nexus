@@ -1,0 +1,10 @@
+
+= neuxs install in windows
+
+编辑 nexus.vmoptions
+
+[source,cmd]
+----
+ln -s D:\program\dev\platform\jvm\jdk\jdk8 D:\program\dev\repo\nexus\app\jre
+
+----
