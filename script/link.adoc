@@ -1,0 +1,33 @@
+
+= link
+
+== windows
+
+[source,cmd]
+----
+@echo off
+
+echo.
+del /f app\bin\nexus.vmoptions
+mklink /h app\bin\nexus.vmoptions data\nexus.vmoptions
+
+rd /s /q app\jre
+mklink /d app\jre %JAVA_HOME_8%
+
+pause >nul
+
+----
+
+== unix
+[source,shell script]
+----
+
+rm -f app\bin\nexus.vmoptions
+ln data\nexus.vmoptions app\bin\nexus.vmoptions
+
+rm -rf app\jre
+ln -s ${JAVA_HOME_8} app\jre
+
+pause >nul
+
+----
