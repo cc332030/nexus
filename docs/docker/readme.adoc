@@ -1,4 +1,8 @@
 
+= nexus docker
+
+[source, shell script]
+----
 image=sonatype/nexus3
 tag=latest
 
@@ -20,13 +24,19 @@ work_dir=$program_home/$name/sonatype-work
 mkdir $work_dir
 chmod 777 $work_dir
 
-
+#   --net=host \
 docker run -d --restart unless-stopped \
-  --name $name \
+  \
   -p 9000:8081 \
+  \
   -v /etc/localtime:/etc/localtime \
+  \
   -v $data_dir:/nexus-data \
   -v $work_dir:$app_home/sonatype-work \
+  \
+  --name $name \
   $image:$tag
 
 docker logs $name
+
+----
