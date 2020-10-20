@@ -1,0 +1,6 @@
+
+= restore
+
+Copy the corresponding .bak files to $data-dir/restore-from-backup for restoration
+
+(Note: For version 3.10.0 or earlier use  $data-dir/backup as the restore location)
