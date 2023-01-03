@@ -2,6 +2,8 @@
 = neuxs install in windows
 
 nexus.exe /install
+nexus.exe /uninstall
+nexus.exe /run
 
 编辑 nexus.vmoptions
 
