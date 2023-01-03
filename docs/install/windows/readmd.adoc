@@ -1,6 +1,8 @@
 
 = neuxs install in windows
 
+nexus.exe /install
+
 编辑 nexus.vmoptions
 
 [source,cmd]
