@@ -1,7 +1,5 @@
 @echo off
 
-%utf8%
-
 echo.
 set /p NEXUS_APP=请输入 nexus 安装路径：
 net stop nexus
