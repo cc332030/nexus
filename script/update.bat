@@ -9,9 +9,9 @@ net stop nexus
 
 curl -L -o %ZIP_PATH% %URL%
 
-rmdir /s /q %APP_PATH%%APP%
-
 7z x -y -o%APP_PATH% %ZIP_PATH%
+
+rmdir /s /q %APP_PATH%%APP%
 
 forfiles /p %APP_PATH% /m nexus* /c "cmd /c rename @file %APP%"
 
