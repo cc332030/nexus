@@ -5,11 +5,11 @@ set APP_PATH=%~dp0
 set ZIP_PATH=%~dp0release.zip
 set URL=https://download.sonatype.com/nexus/3/latest-win64.zip
 
-net stop nexus
-
 curl -L -o %ZIP_PATH% %URL%
 
 7z x -y -o%APP_PATH% %ZIP_PATH%
+
+net stop nexus
 
 rmdir /s /q %APP_PATH%%APP%
 
